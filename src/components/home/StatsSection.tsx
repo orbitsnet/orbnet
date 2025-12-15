@@ -1,57 +1,73 @@
 import { ScrollReveal } from '@/components/ScrollReveal';
 import { AnimatedCounter } from '@/components/AnimatedCounter';
-import { Tv, Users, Clock, Award } from 'lucide-react';
 
 const stats = [
-  {
-    icon: Tv,
-    value: 500,
-    suffix: '+',
-    label: 'HD Channels',
-    description: 'Premium entertainment',
-  },
-  {
-    icon: Users,
-    value: 5,
-    suffix: 'M+',
-    label: 'Happy Customers',
-    description: 'Nationwide coverage',
-  },
-  {
-    icon: Clock,
-    value: 99.9,
-    suffix: '%',
-    label: 'Uptime',
-    description: 'Reliable connection',
-  },
-  {
-    icon: Award,
-    value: 25,
-    suffix: '+',
-    label: 'Years Experience',
-    description: 'Industry leader',
-  },
+  { value: 500, suffix: '+', label: 'Available Channels' },
+  { value: 5, suffix: 'M+', label: 'Happy Clients', highlight: true },
+  { value: 67, suffix: '+', label: 'Covered States' },
+  { value: 98, suffix: '+', label: 'Professional Team' },
 ];
 
 export const StatsSection = () => {
   return (
-    <section className="py-20 bg-muted">
+    <section className="py-24 bg-background">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-          {stats.map((stat, index) => (
-            <ScrollReveal key={stat.label} delay={index}>
-              <div className="text-center group">
-                <div className="w-16 h-16 mx-auto mb-4 rounded-2xl gradient-primary flex items-center justify-center group-hover:shadow-glow-primary transition-shadow duration-300">
-                  <stat.icon className="w-7 h-7 text-primary-foreground" />
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
+          {/* Left - Stats Grid */}
+          <div className="grid grid-cols-2 gap-4">
+            {stats.map((stat, index) => (
+              <ScrollReveal key={stat.label} delay={index}>
+                <div 
+                  className={`rounded-2xl p-6 border ${
+                    stat.highlight 
+                      ? 'bg-accent text-accent-foreground border-accent' 
+                      : 'bg-card border-border'
+                  }`}
+                >
+                  <div className={`text-4xl md:text-5xl font-bold mb-2 ${
+                    stat.highlight ? 'text-accent-foreground' : 'text-foreground'
+                  }`}>
+                    <AnimatedCounter end={stat.value} suffix={stat.suffix} />
+                  </div>
+                  <p className={`text-sm ${
+                    stat.highlight ? 'text-accent-foreground/80' : 'text-muted-foreground'
+                  }`}>
+                    {stat.label}
+                  </p>
                 </div>
-                <div className="text-4xl md:text-5xl font-bold text-foreground mb-2">
-                  <AnimatedCounter end={stat.value} suffix={stat.suffix} />
+              </ScrollReveal>
+            ))}
+          </div>
+
+          {/* Right - Years Experience */}
+          <ScrollReveal delay={2}>
+            <div className="text-center lg:text-left">
+              <div className="relative inline-block">
+                {/* Large stylized 25 */}
+                <div className="flex items-end gap-2">
+                  <span className="text-[10rem] md:text-[14rem] font-bold leading-none text-transparent bg-clip-text" 
+                    style={{ 
+                      WebkitTextStroke: '3px hsl(var(--accent))',
+                    }}>
+                    2
+                  </span>
+                  <span className="text-[10rem] md:text-[14rem] font-bold leading-none text-accent">
+                    5
+                  </span>
                 </div>
-                <h3 className="text-lg font-semibold text-foreground mb-1">{stat.label}</h3>
-                <p className="text-sm text-muted-foreground">{stat.description}</p>
+                
+                {/* Decorative dots */}
+                <div className="absolute top-1/4 right-0 flex gap-1">
+                  <div className="w-2 h-2 rounded-full bg-accent" />
+                  <div className="w-2 h-2 rounded-full bg-accent/50" />
+                </div>
               </div>
-            </ScrollReveal>
-          ))}
+              
+              <h3 className="text-2xl md:text-3xl font-bold text-foreground uppercase tracking-wider mt-4">
+                Years of Professional Experiences
+              </h3>
+            </div>
+          </ScrollReveal>
         </div>
       </div>
     </section>
