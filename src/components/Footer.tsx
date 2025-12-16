@@ -38,7 +38,7 @@ export const Footer = () => {
       {/* Disclosure */}
       <div className="bg-foreground/90 border-b border-primary-foreground/10 py-4 px-4">
         <p className="text-center text-sm text-primary-foreground/70 max-w-4xl mx-auto">
-          <strong>Disclosure:</strong> SwiftAssist is an independent third-party service assistance platform. 
+          <strong>Disclosure:</strong> OrbitNet is an independent third-party service assistance platform. 
           We are not affiliated with, endorsed by, or officially connected to any cable, internet, or streaming service provider. 
           All trademarks belong to their respective owners.
         </p>
@@ -49,11 +49,11 @@ export const Footer = () => {
           {/* Brand */}
           <div className="lg:col-span-2">
             <Link to="/" className="flex items-center gap-2 mb-6">
-              <div className="w-10 h-10 rounded-xl bg-accent flex items-center justify-center">
+              <div className="w-10 h-10 rounded-full bg-accent flex items-center justify-center">
                 <Wifi className="w-5 h-5 text-accent-foreground" />
               </div>
               <span className="text-xl font-bold">
-                Swift<span className="text-accent">Assist</span>
+                Orbit<span className="text-accent">Net</span>
               </span>
             </Link>
             <p className="text-primary-foreground/70 mb-6 max-w-sm">
@@ -142,7 +142,7 @@ export const Footer = () => {
             </div>
           </div>
           <p className="text-center text-primary-foreground/50 text-sm mt-8">
-            © {new Date().getFullYear()} SwiftAssist. Independent service assistance platform. All trademarks belong to their respective owners.
+            © {new Date().getFullYear()} OrbitNet. Independent service assistance platform. All trademarks belong to their respective owners.
           </p>
         </div>
       </div>

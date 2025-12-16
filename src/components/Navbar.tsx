@@ -32,11 +32,11 @@ export const Navbar = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 group">
-            <div className="w-10 h-10 rounded-xl gradient-primary flex items-center justify-center group-hover:shadow-glow-primary transition-shadow duration-300">
-              <Wifi className="w-5 h-5 text-primary-foreground" />
+            <div className="w-10 h-10 rounded-full bg-accent flex items-center justify-center group-hover:shadow-glow transition-shadow duration-300">
+              <Wifi className="w-5 h-5 text-accent-foreground" />
             </div>
             <span className="text-xl font-bold text-foreground">
-              Swift<span className="text-accent">Assist</span>
+              Orbit<span className="text-accent">Net</span>
             </span>
           </Link>
 
