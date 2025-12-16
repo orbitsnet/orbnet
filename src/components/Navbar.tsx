@@ -4,19 +4,18 @@ import { Menu, X, Wifi, ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const navItems = [
-  { name: 'Home', path: '/' },
+  { name: 'About Us', path: '/about' },
   { 
     name: 'Services', 
     path: '/services',
     children: [
-      { name: 'Internet Plans', path: '/internet-plans' },
-      { name: 'Cable TV', path: '/cable-tv' },
-      { name: 'Bundle Offers', path: '/bundles' },
+      { name: 'Internet Assistance', path: '/internet-plans' },
+      { name: 'Cable TV Help', path: '/cable-tv' },
+      { name: 'Bundle Guidance', path: '/bundles' },
     ]
   },
-  { name: 'Coverage', path: '/coverage' },
-  { name: 'About Us', path: '/about' },
-  { name: 'Support', path: '/support' },
+  { name: 'Pricing', path: '/pricing' },
+  { name: 'FAQ', path: '/faq' },
   { name: 'Contact', path: '/contact' },
 ];
 
@@ -37,12 +36,12 @@ export const Navbar = () => {
               <Wifi className="w-5 h-5 text-primary-foreground" />
             </div>
             <span className="text-xl font-bold text-foreground">
-              Swift<span className="text-accent">Connect</span>
+              Swift<span className="text-accent">Assist</span>
             </span>
           </Link>
 
-          {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-1">
+          {/* Desktop Navigation - Pill Style */}
+          <div className="hidden lg:flex items-center gap-1 bg-foreground rounded-full px-2 py-2">
             {navItems.map((item) => (
               <div 
                 key={item.name}
@@ -52,10 +51,10 @@ export const Navbar = () => {
               >
                 <Link
                   to={item.path}
-                  className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors flex items-center gap-1 ${
+                  className={`px-4 py-2 rounded-full text-sm font-medium transition-colors flex items-center gap-1 ${
                     isActive(item.path)
-                      ? 'text-primary bg-primary/10'
-                      : 'text-muted-foreground hover:text-foreground hover:bg-muted'
+                      ? 'text-foreground bg-background'
+                      : 'text-background/80 hover:text-background'
                   }`}
                 >
                   {item.name}
@@ -63,7 +62,7 @@ export const Navbar = () => {
                 </Link>
                 
                 {item.children && activeDropdown === item.name && (
-                  <div className="absolute top-full left-0 mt-1 py-2 bg-card rounded-xl shadow-lg border border-border min-w-[200px] animate-fade-up">
+                  <div className="absolute top-full left-0 mt-3 py-2 bg-card rounded-xl shadow-lg border border-border min-w-[200px] animate-fade-up">
                     {item.children.map((child) => (
                       <Link
                         key={child.name}
@@ -79,13 +78,10 @@ export const Navbar = () => {
             ))}
           </div>
 
-          {/* CTA Buttons */}
+          {/* CTA Button */}
           <div className="hidden lg:flex items-center gap-3">
-            <Button variant="ghost" size="sm" asChild>
-              <Link to="/support">Get Help</Link>
-            </Button>
             <Button variant="hero" size="default" asChild>
-              <Link to="/internet-plans">Get Started</Link>
+              <Link to="/contact">Get Assistance</Link>
             </Button>
           </div>
 
@@ -132,7 +128,7 @@ export const Navbar = () => {
             ))}
             <div className="mt-4 px-4 space-y-2">
               <Button variant="hero" className="w-full" asChild>
-                <Link to="/internet-plans" onClick={() => setIsOpen(false)}>Get Started</Link>
+                <Link to="/contact" onClick={() => setIsOpen(false)}>Get Assistance</Link>
               </Button>
             </div>
           </div>
