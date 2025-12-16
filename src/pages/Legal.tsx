@@ -59,7 +59,7 @@ export const PrivacyPolicy = () => (
         </section>
         <section>
           <h2 className="text-2xl font-bold mb-4">4. Contact Us</h2>
-          <p className="text-muted-foreground">For privacy concerns, email privacy@swiftassist.com or call (888) 964-3161.</p>
+          <p className="text-muted-foreground">For privacy concerns, call (888) 964-3161.</p>
         </section>
       </div>
     </ScrollReveal>
@@ -103,11 +103,11 @@ export const RefundPolicy = () => (
         </section>
         <section>
           <h2 className="text-2xl font-bold mb-4">How to Request a Refund</h2>
-          <p className="text-muted-foreground">Contact our team at (888) 964-3161 or email refunds@swiftassist.com with your order details. Refunds are processed within 5-7 business days.</p>
+          <p className="text-muted-foreground">Contact our team at (888) 964-3161 with your order details. Refunds are processed within 5-7 business days.</p>
         </section>
         <section>
           <h2 className="text-2xl font-bold mb-4">Important Note</h2>
-          <p className="text-muted-foreground">Our refund policy applies only to SwiftAssist service fees. Any fees or charges from service providers are subject to those providers' own refund policies and must be addressed directly with them.</p>
+          <p className="text-muted-foreground">Our refund policy applies only to Orbit Net service fees. Any fees or charges from service providers are subject to those providers' own refund policies and must be addressed directly with them.</p>
         </section>
       </div>
     </ScrollReveal>

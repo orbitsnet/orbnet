@@ -54,7 +54,7 @@ const Contact = () => {
           <div className="flex items-center justify-center gap-3 text-center">
             <Info className="w-5 h-5 text-muted-foreground flex-shrink-0" />
             <p className="text-sm text-muted-foreground">
-              <strong>Disclosure:</strong> SwiftAssist is an independent third-party assistance platform. We are not affiliated with or endorsed by any service provider.
+              <strong>Disclosure:</strong> Orbit Net is an independent third-party assistance platform. We are not affiliated with or endorsed by any service provider.
             </p>
           </div>
         </div>
@@ -70,7 +70,7 @@ const Contact = () => {
                 <h2 className="text-2xl font-bold text-foreground mb-4">Speak With Our Team</h2>
                 <p className="text-muted-foreground mb-8">
                   When you call, our support specialists will greet you and confirm that you've reached 
-                  SwiftAssist, an independent assistance service.
+                  Orbit Net, an independent assistance service.
                 </p>
                 
                 <div className="space-y-6 mb-12">

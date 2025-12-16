@@ -66,7 +66,7 @@ const Pricing = () => {
               <div>
                 <h3 className="font-semibold text-foreground mb-2">Important Information</h3>
                 <p className="text-muted-foreground text-sm">
-                  SwiftAssist is an independent third-party assistance platform. Our service fees cover 
+                  Orbit Net is an independent third-party assistance platform. Our service fees cover 
                   consultation, guidance, and facilitation services only. Any costs associated with actual 
                   cable, internet, or streaming services are billed separately by the respective providers. 
                   We do not sell or resell any provider services.

@@ -1,74 +1,74 @@
 import { ScrollReveal } from '@/components/ScrollReveal';
 import { AnimatedCounter } from '@/components/AnimatedCounter';
+import { Users, Clock, Shield, TrendingUp } from 'lucide-react';
 
 const stats = [
-  { value: 500, suffix: '+', label: 'Available Channels' },
-  { value: 5, suffix: 'M+', label: 'Happy Clients', highlight: true },
-  { value: 67, suffix: '+', label: 'Covered States' },
-  { value: 98, suffix: '+', label: 'Professional Team' },
+  { value: 450, suffix: '+', label: 'Clients Assisted', icon: Users },
+  { value: 2025, suffix: '', label: 'Founded', highlight: true, icon: Clock },
+  { value: 98, suffix: '%', label: 'Client Satisfaction', icon: TrendingUp },
+  { value: 100, suffix: '%', label: 'Independent Service', icon: Shield },
 ];
 
 export const StatsSection = () => {
   return (
-    <section className="py-24 bg-background">
+    <section className="py-24 bg-gradient-to-b from-background via-muted/20 to-background">
       <div className="container mx-auto px-4">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Left - Stats Grid */}
-          <div className="grid grid-cols-2 gap-4">
-            {stats.map((stat, index) => (
-              <ScrollReveal key={stat.label} delay={index}>
+        <ScrollReveal className="text-center mb-16">
+          <span className="text-accent font-semibold text-sm uppercase tracking-wider">Our Track Record</span>
+          <h2 className="text-3xl md:text-4xl font-bold mt-2 text-foreground">
+            Trusted Independent Service Navigation
+          </h2>
+          <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
+            As an independent third-party platform, we've helped hundreds of customers navigate their service options with transparency and expertise.
+          </p>
+        </ScrollReveal>
+
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+          {stats.map((stat, index) => {
+            const Icon = stat.icon;
+            return (
+              <ScrollReveal key={stat.label} delay={index * 0.1}>
                 <div 
-                  className={`rounded-2xl p-6 border ${
+                  className={`rounded-2xl p-8 border transition-all hover:scale-105 ${
                     stat.highlight 
-                      ? 'bg-accent text-accent-foreground border-accent' 
-                      : 'bg-card border-border'
+                      ? 'bg-accent text-accent-foreground border-accent shadow-xl' 
+                      : 'bg-card border-border hover:border-accent/50'
                   }`}
                 >
+                  <div className={`w-12 h-12 rounded-full mb-4 flex items-center justify-center ${
+                    stat.highlight ? 'bg-accent-foreground/20' : 'bg-accent/10'
+                  }`}>
+                    <Icon className={`w-6 h-6 ${stat.highlight ? 'text-accent-foreground' : 'text-accent'}`} />
+                  </div>
+                  
                   <div className={`text-4xl md:text-5xl font-bold mb-2 ${
                     stat.highlight ? 'text-accent-foreground' : 'text-foreground'
                   }`}>
                     <AnimatedCounter end={stat.value} suffix={stat.suffix} />
                   </div>
-                  <p className={`text-sm ${
-                    stat.highlight ? 'text-accent-foreground/80' : 'text-muted-foreground'
+                  
+                  <p className={`text-sm font-medium ${
+                    stat.highlight ? 'text-accent-foreground/90' : 'text-muted-foreground'
                   }`}>
                     {stat.label}
                   </p>
                 </div>
               </ScrollReveal>
-            ))}
-          </div>
-
-          {/* Right - Years Experience */}
-          <ScrollReveal delay={2}>
-            <div className="text-center lg:text-left">
-              <div className="relative inline-block">
-                {/* Large stylized 25 */}
-                <div className="flex items-end gap-2">
-                  <span className="text-[10rem] md:text-[14rem] font-bold leading-none text-transparent bg-clip-text" 
-                    style={{ 
-                      WebkitTextStroke: '3px hsl(var(--accent))',
-                    }}>
-                    2
-                  </span>
-                  <span className="text-[10rem] md:text-[14rem] font-bold leading-none text-accent">
-                    5
-                  </span>
-                </div>
-                
-                {/* Decorative dots */}
-                <div className="absolute top-1/4 right-0 flex gap-1">
-                  <div className="w-2 h-2 rounded-full bg-accent" />
-                  <div className="w-2 h-2 rounded-full bg-accent/50" />
-                </div>
-              </div>
-              
-              <h3 className="text-2xl md:text-3xl font-bold text-foreground uppercase tracking-wider mt-4">
-                Years of Professional Experiences
-              </h3>
-            </div>
-          </ScrollReveal>
+            );
+          })}
         </div>
+
+        {/* Trust Indicators */}
+        <ScrollReveal delay={0.5}>
+          <div className="mt-16 text-center">
+            <div className="inline-flex items-center gap-3 px-6 py-3 bg-card border border-border rounded-full">
+              <Shield className="w-5 h-5 text-accent" />
+              <p className="text-sm text-muted-foreground">
+                <strong className="text-foreground">Independent Third-Party Platform</strong> • Not affiliated with any service provider
+              </p>
+            </div>
+          </div>
+        </ScrollReveal>
       </div>
     </section>
   );

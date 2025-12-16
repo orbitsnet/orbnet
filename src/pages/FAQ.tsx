@@ -9,8 +9,8 @@ import {
 
 const faqs = [
   {
-    question: 'What exactly does SwiftAssist do?',
-    answer: 'SwiftAssist is an independent third-party assistance platform that helps customers navigate cable, internet, and streaming services. We provide guidance, consultations, and facilitate the setup process. We do not sell or resell any provider services.',
+    question: 'What exactly does Orbit Net do?',
+    answer: 'Orbit Net is an independent third-party assistance platform that helps customers navigate cable, internet, and streaming services. We provide guidance, consultations, and facilitate the setup process. We do not sell or resell any provider services.',
   },
   {
     question: 'Are you affiliated with any cable or internet provider?',

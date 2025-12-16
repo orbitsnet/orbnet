@@ -1,22 +1,22 @@
-import { Target, Eye, Users, Award, Clock, Globe } from 'lucide-react';
+import { Target, Eye, Users, Award, Lightbulb, Shield, Rocket, Heart } from 'lucide-react';
 import { Layout } from '@/components/Layout';
 import { ScrollReveal } from '@/components/ScrollReveal';
 import { AnimatedCounter } from '@/components/AnimatedCounter';
 import cityNetwork from '@/assets/city-network.jpg';
 
 const timeline = [
-  { year: '1999', title: 'Founded', description: 'Started as a small cable provider serving 500 homes' },
-  { year: '2005', title: 'Expansion', description: 'Expanded to 10 states with digital cable services' },
-  { year: '2010', title: 'High-Speed Internet', description: 'Launched high-speed internet services nationwide' },
-  { year: '2015', title: 'Fiber Network', description: 'Invested $1B in fiber optic infrastructure' },
-  { year: '2020', title: '5 Million Customers', description: 'Reached milestone of 5 million satisfied customers' },
-  { year: '2024', title: 'Innovation', description: 'Launched 1 Gbps fiber and 4K streaming services' },
+  { year: 'Jan 2025', title: 'The Beginning', description: 'Founded with a vision to simplify service navigation for consumers' },
+  { year: 'Mar 2025', title: 'Platform Launch', description: 'Launched our comprehensive online service comparison platform' },
+  { year: 'Jun 2025', title: 'First Clients', description: 'Successfully helped our first wave of clients find ideal service solutions' },
+  { year: 'Sep 2025', title: 'Growing Team', description: 'Expanded our expert consultation team to serve more customers' },
+  { year: 'Dec 2025', title: 'Milestone Reached', description: 'Achieved 450+ satisfied clients and 98% satisfaction rate' },
+  { year: '2026', title: 'Looking Ahead', description: 'Scaling our platform to help thousands more across the nation' },
 ];
 
 const values = [
-  { icon: Target, title: 'Mission', description: 'To connect every home with reliable, affordable, high-speed internet and premium entertainment.' },
-  { icon: Eye, title: 'Vision', description: 'A world where seamless connectivity empowers every family to learn, work, and entertain without limits.' },
-  { icon: Users, title: 'Values', description: 'Customer-first approach, innovation, integrity, and community commitment guide everything we do.' },
+  { icon: Target, title: 'Mission', description: 'To empower consumers with unbiased guidance in navigating the complex world of internet, cable, and streaming services.' },
+  { icon: Eye, title: 'Vision', description: 'To be the most trusted independent platform where every customer finds the perfect service solution tailored to their needs.' },
+  { icon: Heart, title: 'Values', description: 'Transparency, independence, customer empowerment, and honest guidance drive everything we do.' },
 ];
 
 const About = () => {
@@ -31,15 +31,13 @@ const About = () => {
           <ScrollReveal>
             <div className="text-center text-primary-foreground max-w-3xl mx-auto">
               <span className="inline-block px-4 py-2 rounded-full bg-accent/20 text-accent text-sm font-medium mb-4">
-                About Us
+                About Orbit Net
               </span>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-                Connecting Homes Since{' '}
-                <span className="text-accent">1999</span>
+                Your <span className="text-accent">Independent</span> Service Navigation Partner
               </h1>
               <p className="text-lg text-primary-foreground/80">
-                For over 25 years, SwiftConnect has been at the forefront of telecommunications, 
-                bringing cutting-edge technology to millions of families across America.
+                As a growing startup, we're dedicated to revolutionizing how consumers find and compare internet, cable, and streaming services. We're not tied to any provider—we work for you.
               </p>
             </div>
           </ScrollReveal>
@@ -51,10 +49,10 @@ const About = () => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
-              { value: 25, suffix: '+', label: 'Years Experience' },
-              { value: 5, suffix: 'M+', label: 'Happy Customers' },
-              { value: 50, suffix: '+', label: 'States Covered' },
-              { value: 99.9, suffix: '%', label: 'Uptime' },
+              { value: 2025, suffix: '', label: 'Founded' },
+              { value: 450, suffix: '+', label: 'Clients Helped' },
+              { value: 98, suffix: '%', label: 'Satisfaction Rate' },
+              { value: 100, suffix: '%', label: 'Independent' },
             ].map((stat, index) => (
               <ScrollReveal key={stat.label} delay={index}>
                 <div className="text-center">
@@ -97,7 +95,7 @@ const About = () => {
                 Our Journey
               </h2>
               <p className="text-muted-foreground">
-                From a small startup to a nationwide leader in telecommunications.
+                Launched in 2025, we're building the future of independent service navigation.
               </p>
             </div>
           </ScrollReveal>

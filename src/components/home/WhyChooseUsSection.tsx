@@ -6,7 +6,7 @@ const features = [
   {
     icon: Shield,
     title: 'Trusted Guidance',
-    description: 'Over 10 years of experience helping customers navigate service options.',
+    description: 'A fresh, customer-first approach to helping you navigate service options.',
   },
   {
     icon: Clock,

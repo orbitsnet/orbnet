@@ -26,6 +26,10 @@ export const Navbar = () => {
 
   const isActive = (path: string) => location.pathname === path;
 
+  const toggleDropdown = (itemName: string) => {
+    setActiveDropdown(activeDropdown === itemName ? null : itemName);
+  };
+
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border">
       <div className="container mx-auto px-4">
@@ -46,27 +50,39 @@ export const Navbar = () => {
               <div 
                 key={item.name}
                 className="relative"
-                onMouseEnter={() => item.children && setActiveDropdown(item.name)}
-                onMouseLeave={() => setActiveDropdown(null)}
               >
-                <Link
-                  to={item.path}
-                  className={`px-4 py-2 rounded-full text-sm font-medium transition-colors flex items-center gap-1 ${
-                    isActive(item.path)
-                      ? 'text-foreground bg-background'
-                      : 'text-background/80 hover:text-background'
-                  }`}
-                >
-                  {item.name}
-                  {item.children && <ChevronDown className="w-4 h-4" />}
-                </Link>
+                {item.children ? (
+                  <button
+                    onClick={() => toggleDropdown(item.name)}
+                    className={`px-4 py-2 rounded-full text-sm font-medium transition-colors flex items-center gap-1 ${
+                      isActive(item.path)
+                        ? 'text-foreground bg-background'
+                        : 'text-background/80 hover:text-background'
+                    }`}
+                  >
+                    {item.name}
+                    <ChevronDown className="w-4 h-4" />
+                  </button>
+                ) : (
+                  <Link
+                    to={item.path}
+                    className={`px-4 py-2 rounded-full text-sm font-medium transition-colors flex items-center gap-1 ${
+                      isActive(item.path)
+                        ? 'text-foreground bg-background'
+                        : 'text-background/80 hover:text-background'
+                    }`}
+                  >
+                    {item.name}
+                  </Link>
+                )}
                 
                 {item.children && activeDropdown === item.name && (
-                  <div className="absolute top-full left-0 mt-3 py-2 bg-card rounded-xl shadow-lg border border-border min-w-[200px] animate-fade-up">
+                  <div className="absolute top-full left-0 mt-3 py-2 bg-card rounded-xl shadow-lg border border-border min-w-[200px]">
                     {item.children.map((child) => (
                       <Link
                         key={child.name}
                         to={child.path}
+                        onClick={() => setActiveDropdown(null)}
                         className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
                       >
                         {child.name}
@@ -96,7 +112,7 @@ export const Navbar = () => {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="lg:hidden py-4 border-t border-border animate-fade-up">
+          <div className="lg:hidden py-4 border-t border-border">
             {navItems.map((item) => (
               <div key={item.name}>
                 <Link

@@ -94,7 +94,7 @@ export const HeroSection = () => {
 
           {/* Right Side - Floating Cards */}
           <div className="relative h-[500px] hidden lg:block">
-            {/* Large Card - 10 Years Experience */}
+            {/* Large Card - Founded 2025 */}
             <ScrollReveal delay={0.3} className="absolute top-0 right-0 w-64">
               <div className="bg-background/90 backdrop-blur-sm border border-border rounded-2xl p-6 shadow-xl">
                 <div className="flex items-center gap-3 mb-4">
@@ -102,11 +102,11 @@ export const HeroSection = () => {
                     <Clock className="w-6 h-6 text-accent" />
                   </div>
                   <div>
-                    <p className="text-3xl font-bold text-foreground">10</p>
-                    <p className="text-sm text-muted-foreground">Years</p>
+                    <p className="text-3xl font-bold text-foreground">2025</p>
+                    <p className="text-sm text-muted-foreground">Founded</p>
                   </div>
                 </div>
-                <p className="text-sm text-muted-foreground">Expert Guidance in Service Navigation</p>
+                <p className="text-sm text-muted-foreground">Fresh Perspective in Service Navigation</p>
               </div>
             </ScrollReveal>
 
