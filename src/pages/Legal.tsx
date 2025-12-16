@@ -98,16 +98,64 @@ export const RefundPolicy = () => (
     <ScrollReveal>
       <div className="space-y-8 text-foreground">
         <section>
-          <h2 className="text-2xl font-bold mb-4">7-Day Satisfaction Guarantee</h2>
-          <p className="text-muted-foreground">If you are unsatisfied with our assistance services or if we are unable to provide the guidance you need, you may request a refund within 7 days of your purchase.</p>
+          <h2 className="text-2xl font-bold mb-4">Refund Eligibility</h2>
+          <p className="text-muted-foreground mb-4">
+            Refund requests can be submitted within <strong>7 to 15 days</strong> of service purchase, depending on the type of assistance provided. Eligibility for refunds depends on:
+          </p>
+          <ul className="list-disc list-inside space-y-2 text-muted-foreground ml-4">
+            <li><strong>Service type:</strong> Different consultation services may have different refund windows</li>
+            <li><strong>Delivery status:</strong> Whether our assistance has already been delivered or utilized</li>
+            <li><strong>Service provider actions:</strong> Whether you have already acted on our guidance with a service provider</li>
+          </ul>
+          <p className="text-muted-foreground mt-4">
+            Please review the full eligibility details below or contact our team for clarification on your specific situation.
+          </p>
         </section>
+        
+        <section>
+          <h2 className="text-2xl font-bold mb-4">Refund Timeline by Service Type</h2>
+          <div className="bg-muted/50 rounded-lg p-6 space-y-3">
+            <div>
+              <p className="font-semibold text-foreground">Initial Consultation Services</p>
+              <p className="text-sm text-muted-foreground">15-day refund window if assistance has not been delivered</p>
+            </div>
+            <div>
+              <p className="font-semibold text-foreground">Completed Consultation Services</p>
+              <p className="text-sm text-muted-foreground">7-day refund window after service delivery</p>
+            </div>
+            <div>
+              <p className="font-semibold text-foreground">Ongoing Support Plans</p>
+              <p className="text-sm text-muted-foreground">10-day refund window from purchase date</p>
+            </div>
+          </div>
+        </section>
+        
         <section>
           <h2 className="text-2xl font-bold mb-4">How to Request a Refund</h2>
-          <p className="text-muted-foreground">Contact our team at (888) 964-3161 with your order details. Refunds are processed within 5-7 business days.</p>
+          <p className="text-muted-foreground mb-3">
+            To submit a refund request, contact our team at <strong className="text-foreground">(888) 964-3161</strong> with your order details and reason for the refund request.
+          </p>
+          <p className="text-muted-foreground">
+            Approved refunds are processed within 5-7 business days to your original payment method.
+          </p>
         </section>
+        
+        <section>
+          <h2 className="text-2xl font-bold mb-4">Non-Refundable Situations</h2>
+          <p className="text-muted-foreground mb-3">Refunds may not be available in the following situations:</p>
+          <ul className="list-disc list-inside space-y-2 text-muted-foreground ml-4">
+            <li>Requests submitted after the applicable refund window has expired</li>
+            <li>Services that have been fully delivered and utilized</li>
+            <li>Third-party fees or charges from service providers</li>
+            <li>Cases where you have already activated services with a provider based on our guidance</li>
+          </ul>
+        </section>
+        
         <section>
           <h2 className="text-2xl font-bold mb-4">Important Note</h2>
-          <p className="text-muted-foreground">Our refund policy applies only to Orbit Net service fees. Any fees or charges from service providers are subject to those providers' own refund policies and must be addressed directly with them.</p>
+          <p className="text-muted-foreground">
+            Our refund policy applies <strong>only to Orbit Net consultation fees</strong>. Any fees or charges from service providers (cable, internet, streaming companies) are subject to those providers' own refund policies and must be addressed directly with them. We have no control over or responsibility for third-party provider refunds.
+          </p>
         </section>
       </div>
     </ScrollReveal>

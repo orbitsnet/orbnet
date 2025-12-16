@@ -38,7 +38,7 @@ const faqs = [
   },
   {
     question: 'What is your refund policy?',
-    answer: 'We offer refunds under certain circumstances as outlined in our Refund Policy. If you are unsatisfied with our service or if we are unable to provide the assistance you need, please contact us within 7 days of your purchase.',
+    answer: 'Refund requests can be submitted within 7 to 15 days of service purchase, depending on the type of assistance provided. Eligibility depends on service type and whether assistance has already been delivered. Please review the Refund Policy page for full eligibility details.',
   },
 ];
 
