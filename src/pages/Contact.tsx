@@ -75,10 +75,7 @@ const Contact = () => {
                 
                 <div className="space-y-6 mb-12">
                   {[
-                    { icon: Phone, title: 'Phone', info: '1-800-555-0199', description: 'Mon-Fri: 8AM-8PM EST' },
-                    { icon: Mail, title: 'Email', info: 'help@swiftassist.com', description: 'Response within 24 hours' },
-                    { icon: MapPin, title: 'Address', info: '456 Service Lane', description: 'Assist City, AC 67890' },
-                    { icon: Clock, title: 'Support Hours', info: 'Mon-Fri: 8AM-8PM', description: 'Sat: 9AM-5PM EST' },
+                    { icon: Phone, title: 'Phone', info: '(888) 964-3161', description: 'Available for assistance' },
                   ].map((item) => (
                     <div key={item.title} className="flex items-start gap-4">
                       <div className="w-12 h-12 rounded-xl gradient-primary flex items-center justify-center shrink-0">

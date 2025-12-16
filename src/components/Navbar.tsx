@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Wifi, ChevronDown } from 'lucide-react';
+import { Menu, X, Wifi, ChevronDown, Phone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const navItems = [
@@ -32,10 +32,10 @@ export const Navbar = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 group">
-            <div className="w-10 h-10 rounded-full bg-accent flex items-center justify-center group-hover:shadow-glow transition-shadow duration-300">
-              <Wifi className="w-5 h-5 text-accent-foreground" />
+            <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-accent/10 flex items-center justify-center group-hover:shadow-glow transition-shadow duration-300">
+              <img src="/logo.svg" alt="Orbit Net Logo" className="w-5 h-5 sm:w-7 sm:h-7" />
             </div>
-            <span className="text-xl font-bold text-foreground">
+            <span className="text-lg sm:text-xl font-bold text-foreground">
               Orbit<span className="text-accent">Net</span>
             </span>
           </Link>
@@ -81,7 +81,7 @@ export const Navbar = () => {
           {/* CTA Button */}
           <div className="hidden lg:flex items-center gap-3">
             <Button variant="hero" size="default" asChild>
-              <Link to="/contact">Get Assistance</Link>
+              <a href="tel:8889643161">(888) 964-3161</a>
             </Button>
           </div>
 
@@ -128,6 +128,9 @@ export const Navbar = () => {
             ))}
             <div className="mt-4 px-4 space-y-2">
               <Button variant="hero" className="w-full" asChild>
+                <a href="tel:8889643161">(888) 964-3161</a>
+              </Button>
+              <Button variant="outline" className="w-full" asChild>
                 <Link to="/contact" onClick={() => setIsOpen(false)}>Get Assistance</Link>
               </Button>
             </div>

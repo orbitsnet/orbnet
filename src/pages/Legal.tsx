@@ -22,10 +22,11 @@ export const LegalPage = ({ title, lastUpdated, children }: LegalPageProps) => (
     <section className="py-16 bg-background">
       <div className="container mx-auto px-4">
         {/* Disclosure Banner */}
-        <div className="max-w-3xl mx-auto mb-8 bg-muted/50 border border-border rounded-xl p-4">
-          <p className="text-sm text-muted-foreground text-center">
-            <strong>Disclosure:</strong> SwiftAssist is an independent third-party service assistance platform. 
-            We are not affiliated with or endorsed by any cable, internet, or streaming provider.
+        <div className="max-w-3xl mx-auto mb-8 bg-accent/10 border-2 border-accent rounded-xl p-6">
+          <p className="text-sm text-foreground text-center leading-relaxed">
+            <strong className="text-accent text-base">Important Disclosure:</strong> Orbit Net is an <strong>independent third-party</strong> service assistance platform. 
+            We are <strong>NOT affiliated with, endorsed by, authorized by, or officially connected</strong> to any cable, internet, streaming, or telecommunications provider. 
+            We provide independent consultation and assistance services only. All provider services and charges are handled directly by the respective service providers.
           </p>
         </div>
         <div className="max-w-3xl mx-auto prose prose-slate">
@@ -41,8 +42,12 @@ export const PrivacyPolicy = () => (
     <ScrollReveal>
       <div className="space-y-8 text-foreground">
         <section>
+          <h2 className="text-2xl font-bold mb-4">About Orbit Net</h2>
+          <p className="text-muted-foreground mb-4"><strong>Orbit Net is an independent third-party service assistance platform.</strong> We are not affiliated with, endorsed by, or officially connected to any service provider. We provide independent consultation services to help you navigate your options.</p>
+        </section>
+        <section>
           <h2 className="text-2xl font-bold mb-4">1. Information We Collect</h2>
-          <p className="text-muted-foreground">We collect information you provide when requesting our assistance services, including name, email, phone number, and service preferences. We do not collect or store any service provider account passwords or credentials.</p>
+          <p className="text-muted-foreground">We collect information you provide when requesting our independent assistance services, including name, email, phone number, and service preferences. We do not collect or store any service provider account passwords or credentials.</p>
         </section>
         <section>
           <h2 className="text-2xl font-bold mb-4">2. How We Use Your Information</h2>
@@ -54,7 +59,7 @@ export const PrivacyPolicy = () => (
         </section>
         <section>
           <h2 className="text-2xl font-bold mb-4">4. Contact Us</h2>
-          <p className="text-muted-foreground">For privacy concerns, email privacy@swiftassist.com or call 1-800-555-0199.</p>
+          <p className="text-muted-foreground">For privacy concerns, email privacy@swiftassist.com or call (888) 964-3161.</p>
         </section>
       </div>
     </ScrollReveal>
@@ -66,12 +71,14 @@ export const TermsConditions = () => (
     <ScrollReveal>
       <div className="space-y-8 text-foreground">
         <section>
-          <h2 className="text-2xl font-bold mb-4">1. Service Agreement</h2>
-          <p className="text-muted-foreground">By using SwiftAssist services, you acknowledge that we are an independent third-party assistance platform. We are not affiliated with, endorsed by, or officially connected to any cable, internet, or streaming service provider.</p>
+          <h2 className="text-2xl font-bold mb-4">1. Independent Third-Party Service Agreement</h2>
+          <p className="text-muted-foreground mb-3"><strong>IMPORTANT:</strong> By using Orbit Net services, you acknowledge and agree that we are an <strong>independent third-party</strong> assistance platform.</p>
+          <p className="text-muted-foreground">We are <strong>NOT affiliated with, endorsed by, authorized by, sponsored by, or officially connected</strong> to any cable, internet, streaming, telecommunications, or utility service provider including but not limited to Spectrum®, Xfinity®, AT&T®, Verizon®, Cox®, CenturyLink®, Frontier®, or any other provider.</p>
         </section>
         <section>
-          <h2 className="text-2xl font-bold mb-4">2. Nature of Services</h2>
-          <p className="text-muted-foreground">SwiftAssist provides consultation, guidance, and facilitation services to help customers navigate cable, internet, and streaming options. We do not sell, resell, or provide any provider services directly. Our fees are for assistance services only.</p>
+          <h2 className="text-2xl font-bold mb-4">2. Nature of Independent Services</h2>
+          <p className="text-muted-foreground mb-3">Orbit Net provides <strong>independent consultation, guidance, and facilitation services only</strong>. We help customers understand and navigate cable, internet, and streaming options.</p>
+          <p className="text-muted-foreground">We do NOT sell, resell, or provide any provider services directly. We are NOT agents, representatives, or authorized dealers of any service provider. Our fees are strictly for our independent assistance services only.</p>
         </section>
         <section>
           <h2 className="text-2xl font-bold mb-4">3. Service Fees</h2>
@@ -96,7 +103,7 @@ export const RefundPolicy = () => (
         </section>
         <section>
           <h2 className="text-2xl font-bold mb-4">How to Request a Refund</h2>
-          <p className="text-muted-foreground">Contact our team at 1-800-555-0199 or email refunds@swiftassist.com with your order details. Refunds are processed within 5-7 business days.</p>
+          <p className="text-muted-foreground">Contact our team at (888) 964-3161 or email refunds@swiftassist.com with your order details. Refunds are processed within 5-7 business days.</p>
         </section>
         <section>
           <h2 className="text-2xl font-bold mb-4">Important Note</h2>
@@ -113,7 +120,9 @@ export const Disclaimer = () => (
       <div className="space-y-8 text-foreground">
         <section>
           <h2 className="text-2xl font-bold mb-4">Independent Third-Party Platform</h2>
-          <p className="text-muted-foreground">SwiftAssist is an independent service assistance platform. We are not affiliated with, endorsed by, authorized by, or officially connected to any cable, internet, or streaming service provider including but not limited to Spectrum®, Xfinity®, AT&T®, Verizon®, or any other provider.</p>
+          <p className="text-muted-foreground mb-3"><strong className="text-accent">IMPORTANT DISCLOSURE:</strong> Orbit Net is an <strong>independent third-party</strong> service assistance platform.</p>
+          <p className="text-muted-foreground mb-3">We are <strong>NOT affiliated with, endorsed by, authorized by, sponsored by, approved by, or officially connected in any way</strong> to any cable, internet, streaming, telecommunications, or utility service provider including but not limited to Spectrum®, Xfinity®, Comcast®, AT&T®, Verizon®, Cox®, CenturyLink®, Frontier®, Charter®, Optimum®, Mediacom®, or any other provider.</p>
+          <p className="text-muted-foreground">We are NOT agents, representatives, resellers, or authorized dealers of any service provider. We provide <strong>independent consultation services only</strong>.</p>
         </section>
         <section>
           <h2 className="text-2xl font-bold mb-4">Service Limitations</h2>

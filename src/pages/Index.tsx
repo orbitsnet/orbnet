@@ -5,7 +5,6 @@ import { StatsSection } from '@/components/home/StatsSection';
 import { ServicesSection } from '@/components/home/ServicesSection';
 import { WhyChooseUsSection } from '@/components/home/WhyChooseUsSection';
 import { SpeedTestSection } from '@/components/home/SpeedTestSection';
-import { LiveTVSection } from '@/components/home/LiveTVSection';
 import { TestimonialsSection } from '@/components/home/TestimonialsSection';
 import { CTASection } from '@/components/home/CTASection';
 
@@ -18,7 +17,6 @@ const Index = () => {
       <ServicesSection />
       <WhyChooseUsSection />
       <SpeedTestSection />
-      <LiveTVSection />
       <TestimonialsSection />
       <CTASection />
     </Layout>
