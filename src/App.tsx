@@ -13,6 +13,7 @@ import Contact from "./pages/Contact";
 import Pricing from "./pages/Pricing";
 import FAQ from "./pages/FAQ";
 import { PrivacyPolicy, TermsConditions, RefundPolicy, Disclaimer } from "./pages/Legal";
+import { FloatingCallButton } from "./components/FloatingCallButton";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -39,6 +40,7 @@ const App = () => (
           <Route path="/disclaimer" element={<Disclaimer />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
+        <FloatingCallButton />
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>

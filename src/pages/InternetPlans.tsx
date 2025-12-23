@@ -113,9 +113,12 @@ const InternetPlans = () => {
                     variant={plan.popular ? 'hero' : 'outline'} 
                     size="lg" 
                     className="w-full"
+                    asChild
                   >
-                    Get Started
-                    <ArrowRight className="w-5 h-5 ml-2" />
+                    <a href="tel:8889643161">
+                      Call Now
+                      <ArrowRight className="w-5 h-5 ml-2" />
+                    </a>
                   </Button>
                 </div>
               </ScrollReveal>

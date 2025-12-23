@@ -103,7 +103,7 @@ const Pricing = () => {
                     className="w-full"
                     asChild
                   >
-                    <Link to="/contact">Request Assistance</Link>
+                    <a href="tel:8889643161">Call Now</a>
                   </Button>
                 </div>
               </ScrollReveal>

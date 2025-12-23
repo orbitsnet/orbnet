@@ -97,7 +97,10 @@ export const Navbar = () => {
           {/* CTA Button */}
           <div className="hidden lg:flex items-center gap-3">
             <Button variant="hero" size="default" asChild>
-              <a href="tel:8889643161">(888) 964-3161</a>
+              <a href="tel:8889643161" className="flex items-center gap-2">
+                <Phone className="w-5 h-5" />
+                (888) 964-3161
+              </a>
             </Button>
           </div>
 
@@ -144,10 +147,10 @@ export const Navbar = () => {
             ))}
             <div className="mt-4 px-4 space-y-2">
               <Button variant="hero" className="w-full" asChild>
-                <a href="tel:8889643161">(888) 964-3161</a>
+                <a href="tel:8889643161">Call Now</a>
               </Button>
               <Button variant="outline" className="w-full" asChild>
-                <Link to="/contact" onClick={() => setIsOpen(false)}>Get Assistance</Link>
+                <a href="tel:8889643161">Contact Us</a>
               </Button>
             </div>
           </div>

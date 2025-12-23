@@ -74,8 +74,9 @@ const Contact = () => {
                 </p>
                 
                 <div className="space-y-6 mb-12">
-                  {[
+                  {[ 
                     { icon: Phone, title: 'Phone', info: '(888) 964-3161', description: 'Available for assistance' },
+                    { icon: MapPin, title: 'Address', info: '76 Co Rd 436 Dayton, TX 77535', description: 'Our main office location' },
                   ].map((item) => (
                     <div key={item.title} className="flex items-start gap-4">
                       <div className="w-12 h-12 rounded-xl gradient-primary flex items-center justify-center shrink-0">

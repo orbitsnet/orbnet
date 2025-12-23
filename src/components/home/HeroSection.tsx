@@ -59,15 +59,15 @@ export const HeroSection = () => {
             <ScrollReveal delay={0.3}>
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
                 <Button variant="hero" size="xl" className="rounded-full w-full sm:w-auto" asChild>
-                  <Link to="/contact">
-                    Request Assistance
+                  <a href="tel:8889643161">
+                    Call Now
                     <ArrowRight className="w-5 h-5 ml-2" />
-                  </Link>
+                  </a>
                 </Button>
                 <Button variant="outline" size="xl" className="rounded-full bg-foreground text-background hover:bg-foreground/90 w-full sm:w-auto" asChild>
-                  <Link to="/contact">
-                    Speak With Support
-                  </Link>
+                  <a href="tel:8889643161">
+                    Contact Us
+                  </a>
                 </Button>
               </div>
             </ScrollReveal>

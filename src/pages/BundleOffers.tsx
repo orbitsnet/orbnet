@@ -139,9 +139,12 @@ const BundleOffers = () => {
                     variant={bundle.popular ? 'hero' : 'outline'} 
                     size="lg" 
                     className="w-full"
+                    asChild
                   >
-                    Get This Bundle
-                    <ArrowRight className="w-5 h-5 ml-2" />
+                    <a href="tel:8889643161">
+                      Call Now
+                      <ArrowRight className="w-5 h-5 ml-2" />
+                    </a>
                   </Button>
                 </div>
               </ScrollReveal>

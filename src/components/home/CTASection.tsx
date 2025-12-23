@@ -27,16 +27,16 @@ export const CTASection = () => {
             
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Button variant="hero" size="xl" asChild>
-                <Link to="/internet-plans">
-                  Get Started Now
+                <a href="tel:8889643161">
+                  Call Now
                   <ArrowRight className="w-5 h-5 ml-2" />
-                </Link>
+                </a>
               </Button>
               <Button variant="heroOutline" size="xl" asChild>
-                <Link to="/contact">
+                <a href="tel:8889643161">
                   <Phone className="w-5 h-5 mr-2" />
                   Contact Us
-                </Link>
+                </a>
               </Button>
             </div>
             

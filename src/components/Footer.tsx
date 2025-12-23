@@ -64,6 +64,10 @@ export const Footer = () => {
                 <Phone className="w-5 h-5" />
                 <span>(888) 964-3161</span>
               </a>
+              <div className="flex items-center gap-3 text-primary-foreground/70">
+                <MapPin className="w-5 h-5" />
+                <span>76 Co Rd 436 Dayton, TX 77535</span>
+              </div>
             </div>
           </div>
 
